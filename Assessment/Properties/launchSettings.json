@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Assessment": {
+      "commandName": "Project",
+      "commandLineArgs": "mock"
+    }
+  }
+}
