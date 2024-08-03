@@ -5,6 +5,7 @@ using Assessment.Services;
 using ILogger = Microsoft.Extensions.Logging.ILogger;
 using Assessment.Business;
 using Newtonsoft.Json.Linq;
+using NLog.Extensions.Logging;
 
 namespace Synapse.OrdersExample
 {
@@ -79,7 +80,8 @@ namespace Synapse.OrdersExample
 
             services.AddLogging(loggingBuilder =>
             {
-                loggingBuilder.AddDebug();
+                // configure Logging with NLog
+                loggingBuilder.AddNLog(config);
             });
             return services.BuildServiceProvider();
         }
